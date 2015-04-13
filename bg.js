@@ -1,19 +1,27 @@
 var content = "";
 var created = false;
+var interval_sec = 15;
 
 $(function () {
-    setInterval("notifier()", 10000);
+    setInterval("notifier()", interval_sec * 1000);
 });
 
 function notifier() {
+    //設定値がない場合即時復帰
+    if (!localStorage["url"]) return;
+    if (localStorage["interval"]) {
+        interval_sec = parseInt(localStorage["interval"]);
+    }
+
     $.ajax({
-            url: 'http://chaton.practical-scheme.net/haskell-ja/var/index.rdf',
+            url: localStorage["url"],
             dataType: 'xml',
+            cache: false,
         })
         .done(function (data) {
             var $target = $(data).find("item:first");
             var temp_content = $target.find("title").text();
-        
+
             // 更新なしの場合即時復帰する。
             // XMLは順番が保証されないので（確か）この判定方法は怪しい。
             if (content === temp_content) return;
