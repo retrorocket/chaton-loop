@@ -2,12 +2,10 @@
     "manifest_version": 2,
     "name": "しゃとんるーぷ",
     "version": "0.1",
-    "browser_action": {
-        "default_title": "しゃとんるーぷ"
-    },
     "background": {
         "page": "background.html"
     },
-    "permissions": ["notifications", "http://*/*"],
+    "options_page": "options.html",
+    "permissions": ["notifications", "http://*/*", "https://*/*"],
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
