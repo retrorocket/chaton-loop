@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しゃとんるーぷ設定</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="1.18.13.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <h1>Chaton loop Settings.</h1>
+        </div>
+        <div class="content">
+            <h2 id="the-foundation" class="content-subhead">RSS Settings.</h2>
+
+            <form class="pure-form pure-form-aligned">
+                <fieldset>
+                    <div class="pure-control-group">
+                        <label for="name">RSS URL</label>
+                        <input id="name" type="text" placeholder="http://chaton.practical-scheme.net/haskell-ja/var/index.rdf">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="foo">interval of checking new messages (sec)</label>
+                        <input id="foo" type="text" placeholder="10">
+                    </div>
+
+                    <div class="pure-controls">
+                        <button id="sub" class="pure-button pure-button-primary">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
